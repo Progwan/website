@@ -39,3 +39,9 @@ footer {
 	font-size: 1em;
 	font-family: 'Shippori Mincho', serif;
 }
+
+@media screen and (max-width: 954px) {
+	..disco-cont  {
+		width: 100%;
+	}
+}
