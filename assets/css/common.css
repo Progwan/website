@@ -1,0 +1,282 @@
+html {
+	color: #4b4b4b;
+	font-size: 16px;
+	font-family: 'YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Yu Gothic UI','ＭＳ ゴシック','Arial','Helvetica Neue', sans-serif;
+}
+
+ul {
+	padding: 0;
+}
+
+body {
+	overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar{
+  display:none;
+}
+/****** header ********/
+
+header {
+	z-index: 100;
+	padding:  0 2em 0;
+	margin-bottom: 0;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid #4b4b4b;
+}
+header h1 {
+	margin:1vh 0;
+}
+.azukineko {
+	height: 6vh;
+}
+
+header a {	
+	text-decoration: none;
+	color: #4b4b4b;
+}
+
+header nav {
+	margin:0 0 0 auto;
+	padding-right: 5em;
+}
+
+header ul {
+	list-style: none;
+	margin: 0;
+	display: flex;
+}
+
+.pc-nav-li {
+	margin: 0 0 0 5em;
+	font-size: 1em;
+}
+
+.pc-nav-li a {
+  position: relative;
+}
+
+.pc-nav-li a::after {
+	position: absolute; 
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #4b4b4b;
+	bottom: -3px;
+	transform: scale(0, 1);
+	transform-origin: center top;
+	transition: transform 0.3s;
+	}
+		
+.pc-nav-li a:hover::after {
+	transform: scale(1, 1);
+}
+
+.pc-nav {
+	display: block;
+}
+.sp-nav,.MenuBtn {
+	display: none;
+}
+
+/****** header end ******/
+
+/***** footer *****/
+footer {
+	width: 100vw;
+	margin-top: 20px;
+}
+footer ul {
+	display: flex;
+	justify-content: center;
+  align-items: center;
+	list-style: none;
+}
+
+footer li {
+	margin: 0 5vw;
+}
+
+footer img {
+	width: min(5vw, 40px);
+}
+
+.cont-title {
+	padding-top: 1vh;
+	text-align: center;
+	font-size: 2em;
+	font-family: 'Playfair Display', serif;
+	padding-bottom: 3vh;
+}
+
+.container {
+	display: block;
+}
+
+.anim {
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+	z-index: 100000;
+	position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 954px) {
+	.pc-nav {
+		display: none;
+	}
+	
+	.sp-nav {
+		z-index: auto;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		display: block;
+		width: 100%;
+		background: rgba(0, 0, 0, 1);
+		transition: all .2s ease-in-out;
+		padding-left: 5vw;
+		padding-top: 5vh;
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	
+	.sp-azukineko {
+		height: 6vh;
+		width: auto;
+		margin-bottom: 1vh;
+	}
+	
+	.sp-nav-nav {
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.sp-nav li {
+		margin: 0;
+		padding: 0;
+	}
+	.sp-nav-nav li span {
+		z-index:auto;
+		font-size: 18px;
+		color: #fff;
+	}
+	.sp-nav-nav li a, .sp-nav-nav li span {
+		display: block;
+		font-size: 1.3em;
+		padding: 3vh 0;
+	}
+	
+	.sp-icon {
+		position: absolute;
+		margin-top: 2vh;
+		margin-bottom: 2vh;
+		bottom: 5vh;
+	}
+	
+	.sp-icon li {
+		margin: 0 0 0 1em;
+	}
+	
+	.sp-icon li:first-child{
+		margin: 0;
+	}
+	
+	.sp-icon img {
+		width: 2em;
+		height: auto;
+	}
+	.sp-nav .close {
+		position: relative;
+		padding-left: 20px;
+	}
+	.toggle {
+		transform: translateX( 0 );
+		opacity: 1;
+	}
+
+	.MenuBtn {
+    position: relative;
+		margin: 0 0 0 auto;
+    width: 50px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+		border: none;
+		background-color: rgba(0, 0, 0, 0);
+
+	}
+
+	.MenuBtn .MenuBtn-BarFrame {
+			position: relative;
+			display: block;
+			width: 30px;
+			height: 2px;
+	}
+
+	.MenuBtn .MenuBtn-BarFrame-FirstBar {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-color: #4b4b4b;
+			transition: all .15s linear;
+
+	}
+
+	.MenuBtn .MenuBtn-BarFrame-SecondBar {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-color: #4b4b4b;
+			transition: all .15s linear;
+
+			transform: translateY(-8px) rotate(0deg);
+	}
+
+	.MenuBtn .MenuBtn-BarFrame-ThirdBar {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-color: #4b4b4b;
+			transition: all .15s linear;
+
+			transform: translateY(8px) rotate(0deg);
+	}
+
+	.MenuBtn.isClosed .MenuBtn-BarFrame-FirstBar {
+			opacity: 0;
+	}
+
+	.MenuBtn.isClosed .MenuBtn-BarFrame-SecondBar {
+			transform: translateY(0) rotate(45deg);
+			background-color: #fff;
+	}
+
+	.MenuBtn.isClosed .MenuBtn-BarFrame-ThirdBar {
+			transform: translateY(0) rotate(-45deg);
+			background-color: #fff;
+	}
+
+	footer img {
+		width: max(5vw, 2em);
+	}
+}
+

@@ -1,0 +1,54 @@
+.works {
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3.3%;
+	padding: 2px;
+	margin: auto;
+}
+
+.content {
+	width: 30%;
+	margin: auto;
+	padding-bottom: 10vh;
+}
+
+.link {
+	list-style: none;
+	display: flex;
+	width: 90%;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+}
+
+.link p{
+	width: 100%;
+	margin-left: auto;
+	white-space: nowrap;
+	font-size: 1em;
+	font-family: 'Shippori Mincho', serif;
+}
+
+.link-img {
+	width: min(30%, 2em);
+	margin-left: auto;
+}
+
+.link-futatsu .link-img:last-child {
+	margin-left: 20px;
+}
+
+.works::after{
+  content:"";
+  display: block;
+  width:30%;
+	margin: auto;
+	padding-bottom: 10vh;
+}
+
+@media screen and (max-width: 954px) {
+	.content {
+		width: 100%;
+	}
+}
